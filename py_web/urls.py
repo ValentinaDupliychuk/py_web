@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('test_app.urls')),
     path('', include('common.urls')),
+    path('', include('blog_drf.urls')),
+    path('', include('ToDoListViews.urls'))
     ]

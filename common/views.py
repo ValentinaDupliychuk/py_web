@@ -11,5 +11,7 @@ class Hello_World(View):
 
 
 class IndexView(View):
-    def get(self, request):
-        return render(request, "common/index.html")
+    def get(self, request: HttpRequest) -> HttpResponse:
+        context = {"user": request.user.username, "version": "3.6"}
+        return render(request, "common/index.html", context)
+
